@@ -22,7 +22,7 @@ model = joblib.load(HERE / "model.joblib")
 class Order(BaseModel):
     "One food order waiting to be delivered."
 
-    distance_km: float = Field(..., gt=0, le=25, examples=[4.2])
+    distance_km: float = Field(..., gt=0, le=50, examples=[4.2])
     prep_time_min: int = Field(..., ge=0, le=120, examples=[12])
     traffic_level: int = Field(..., ge=1, le=3, examples=[2])
     rain: int = Field(..., ge=0, le=1, examples=[0])
@@ -46,14 +46,3 @@ def predict(order: Order):
     minutes = float(model.predict(row)[0])
     return Prediction(delivery_min=round(minutes, 1),
                       model_version=app.version)
-
-
-
-@app.get("/model-info")
-def model_info():
-    "Describe the model this service is running."
-    return {
-        "features": FEATURES,
-        "model_type": type(model).__name__,
-        "version": app.version,
-    }

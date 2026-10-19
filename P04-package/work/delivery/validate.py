@@ -1,6 +1,5 @@
 "Is this order usable?"
 
-
 def is_valid_order(order):
     "True if the order passes every rule."
     if order["distance_km"] <= 0:

@@ -30,6 +30,57 @@ def test_error_is_better_than_guessing(model_mae, baseline_mae):
 
 
 def test_heavier_traffic_is_never_faster(trained_model):
-    light = trained_model.predict(make_order(traffic_level=1))[0]
-    heavy = trained_model.predict(make_order(traffic_level=3))[0]
-    assert heavy >= light
+    level_1 = trained_model.predict(make_order(traffic_level=1))[0]
+    level_3 = trained_model.predict(make_order(traffic_level=3))[0]
+    assert level_3 >= level_1
+
+
+def test_heavier_traffic_is_never_faster(trained_model):
+    level_1 = trained_model.predict(make_order(traffic_level=1))[0]
+    level_3 = trained_model.predict(make_order(traffic_level=3))[0]
+    assert level_3 >= level_1
+
+
+def test_heavier_traffic_is_never_faster(trained_model):
+    level_1 = trained_model.predict(make_order(traffic_level=1))[0]
+    level_3 = trained_model.predict(make_order(traffic_level=3))[0]
+    assert level_3 >= level_1
+
+
+def test_heavier_traffic_is_never_faster(trained_model):
+    level_1 = trained_model.predict(make_order(traffic_level=1))[0]
+    level_3 = trained_model.predict(make_order(traffic_level=3))[0]
+    assert level_3 >= level_1
+
+
+def test_heavier_traffic_is_never_faster(trained_model):
+    traffic_1 = trained_model.predict(
+        make_order(traffic_level=1)
+    )[0]
+
+    traffic_3 = trained_model.predict(
+        make_order(traffic_level=3)
+    )[0]
+
+    assert traffic_3 >= traffic_1
+
+
+def test_heavier_traffic_is_never_faster(trained_model):
+    level_1 = trained_model.predict(make_order(traffic_level=1))[0]
+    level_3 = trained_model.predict(make_order(traffic_level=3))[0]
+
+    assert level_3 >= level_1
+
+
+def test_heavier_traffic_is_never_faster(trained_model):
+    level_1 = trained_model.predict(make_order(traffic_level=1))[0]
+    level_3 = trained_model.predict(make_order(traffic_level=3))[0]
+
+    assert level_3 >= level_1
+
+
+def test_heavier_traffic_is_never_faster(trained_model):
+    level_1 = trained_model.predict(make_order(traffic_level=1))[0]
+    level_3 = trained_model.predict(make_order(traffic_level=3))[0]
+
+    assert level_3 >= level_1

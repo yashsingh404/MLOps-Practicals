@@ -1,4 +1,4 @@
-"My own tests for minutes_per_km."
+"""My own tests for minutes_per_km."""
 
 import pytest
 
@@ -11,4 +11,4 @@ def test_slow_delivery():
 
 def test_negative_distance_raises():
     with pytest.raises(ValueError):
-        minutes_per_km(30, -3)
+        minutes_per_km(60, -3)
