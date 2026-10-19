@@ -6,3 +6,21 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Generated MLflow files
+P06-mlflow/mlflow.db
+P06-mlflow/mlruns/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Generated MLflow files
+P06-mlflow/mlflow.db
+P06-mlflow/mlruns/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
